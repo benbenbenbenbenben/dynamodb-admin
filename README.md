@@ -3,6 +3,10 @@
 [![npm](https://img.shields.io/npm/v/dynamodb-admin.svg)](https://www.npmjs.com/package/dynamodb-admin)
 > GUI for [DynamoDB Local](https://aws.amazon.com/blogs/aws/dynamodb-local-for-desktop-development/), [dynalite](https://github.com/mhart/dynalite), [localstack](https://github.com/localstack/localstack) etc.
 
+## This Fork
+
+Not a lot in here, but the BigInts render and it runs on Node 23 without building e.g. `node bin/dynamodb-admin.ts`.
+
 ## Usage
 
 ### Use as globally installed app
