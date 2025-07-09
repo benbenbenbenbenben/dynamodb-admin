@@ -12,7 +12,10 @@ Not a lot in here, but the BigInts render and it runs on Node 23 without buildin
 ### Use as globally installed app
 
 ```bash
-npm install -g dynamodb-admin
+# Uninstall the original dynamodb-admin if you have it installed...
+npm uninstall -g dynamodb-admin
+# ...and install this fork instead
+npm install -g https://github.com/benbenbenbenbenben/dynamodb-admin
 
 dynamodb-admin --dynamo-endpoint=http://localhost:8000
 ```
