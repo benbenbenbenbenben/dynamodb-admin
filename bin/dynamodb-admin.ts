@@ -2,7 +2,7 @@ import { readFileSync } from 'node:fs';
 import { ArgumentParser } from 'argparse';
 import open from 'open';
 import clc from 'cli-color';
-import { createServer } from '../lib/backend';
+import { createServer } from '../lib/backend.ts';
 
 const { description, version } = JSON.parse(readFileSync(new URL('../package.json', import.meta.url), { encoding: 'utf8' }));
 

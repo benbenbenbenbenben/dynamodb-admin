@@ -1,9 +1,11 @@
 import path from 'node:path';
 import express, { type Express } from 'express';
 import { DynamoDBClient } from '@aws-sdk/client-dynamodb';
-import { createAwsConfig } from './config';
-import { setupRoutes } from './routes';
-import { DynamoApiController } from './dynamoDbApi';
+import { createAwsConfig } from './config.ts';
+import { setupRoutes } from './routes.ts';
+import { DynamoApiController } from './dynamoDbApi.ts';
+
+const __dirname = globalThis.__dirname || path.dirname(new URL(import.meta.url).pathname);
 
 export type CreateServerOptions = {
     dynamoDbClient?: DynamoDBClient;

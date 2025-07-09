@@ -1,8 +1,8 @@
 import type { BatchWriteItemOutput, KeySchemaElement } from '@aws-sdk/client-dynamodb';
 import type { BatchWriteCommandInput, BatchWriteCommandOutput } from '@aws-sdk/lib-dynamodb';
-import { doSearch, type ScanParams } from '../util';
-import type { DynamoApiController } from '../dynamoDbApi';
-import type { ItemList } from '../types';
+import { doSearch, type ScanParams } from '../util.ts';
+import type { DynamoApiController } from '../dynamoDbApi.ts';
+import type { ItemList } from '../types.d.ts';
 
 /**
  * This function deletes all record from a given table within dynamodb.

@@ -5,14 +5,16 @@ import errorhandler from 'errorhandler';
 import bodyParser from 'body-parser';
 import pickBy from 'lodash.pickby';
 import cookieParser from 'cookie-parser';
-import { extractKey, extractKeysForItems, isAttributeNotAlreadyCreated, parseKey, ScanParams } from './util';
-import { getPage } from './actions/getPage';
-import { purgeTable } from './actions/purgeTable';
-import { listAllTables } from './actions/listAllTables';
-import asyncMiddleware from './utils/asyncMiddleware';
-import type { DynamoApiController } from './dynamoDbApi';
+import { extractKey, extractKeysForItems, isAttributeNotAlreadyCreated, parseKey, type ScanParams } from './util.ts';
+import { getPage } from './actions/getPage.ts';
+import { purgeTable } from './actions/purgeTable.ts';
+import { listAllTables } from './actions/listAllTables.ts';
+import asyncMiddleware from './utils/asyncMiddleware.ts';
+import type { DynamoApiController } from './dynamoDbApi.ts';
 
 const DEFAULT_THEME = process.env.DEFAULT_THEME || 'light';
+
+const __dirname = globalThis.__dirname || path.dirname(new URL(import.meta.url).pathname);
 
 export function setupRoutes(app: Express, ddbApi: DynamoApiController): void {
     app.use(errorhandler());

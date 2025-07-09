@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { extractKeysForItems } from './util';
+import { extractKeysForItems } from './util.ts';
 
 const items = [
     {

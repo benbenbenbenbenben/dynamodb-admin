@@ -34,7 +34,7 @@ import {
     type ScanCommandInput,
     type ScanCommandOutput,
 } from '@aws-sdk/lib-dynamodb';
-import { DynamoDBAdminError } from './util';
+import { DynamoDBAdminError } from './util.ts';
 
 export class DynamoApiController {
     dynamodb: DynamoDBClient;

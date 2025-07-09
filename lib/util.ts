@@ -1,7 +1,17 @@
 import type { AttributeDefinition, KeySchemaElement, QueryInput, TableDescription } from '@aws-sdk/client-dynamodb';
 import type { ScanCommandInput, QueryCommandInput } from '@aws-sdk/lib-dynamodb';
-import type { DynamoApiController } from './dynamoDbApi';
-import type { ItemList, Key } from './types';
+import type { DynamoApiController } from './dynamoDbApi.ts';
+import type { ItemList, Key } from './types.d.ts';
+
+declare global {
+    interface BigInt {
+        toJSON(): number;
+    }
+}
+
+BigInt.prototype.toJSON = function() {
+    return Number(this);
+};
 
 export class DynamoDBAdminError extends Error {
     public status: number;

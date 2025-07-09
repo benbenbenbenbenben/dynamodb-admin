@@ -6,6 +6,7 @@
     "dynamodb-admin": "dist/dynamodb-admin.js"
   },
   "main": "dist/backend.js",
+  "type": "module",
   "types": "dist/lib/backend.d.ts",
   "files": [
     "dist",

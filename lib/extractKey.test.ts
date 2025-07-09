@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import type { TableDescription } from '@aws-sdk/client-dynamodb';
-import { extractKey } from './util';
+import { extractKey } from './util.ts';
 
 const item1 = {
     last_name: 'Doe',

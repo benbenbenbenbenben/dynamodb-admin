@@ -1,7 +1,7 @@
 import type { KeySchemaElement } from '@aws-sdk/client-dynamodb';
-import { extractKey, doSearch, type ScanParams } from '../util';
-import type { DynamoApiController } from '../dynamoDbApi';
-import type { ItemList, Key } from '../types';
+import { extractKey, doSearch, type ScanParams } from '../util.ts';
+import type { DynamoApiController } from '../dynamoDbApi.ts';
+import type { ItemList, Key } from '../types.d.ts';
 
 export async function getPage(
     ddbApi: DynamoApiController,
